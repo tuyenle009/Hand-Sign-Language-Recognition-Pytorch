@@ -14,6 +14,7 @@ from tqdm import tqdm
 from sklearn.metrics import accuracy_score, confusion_matrix
 import os
 import shutil
+#this function will draw plots in tensorboard
 def plot_confusion_matrix(writer, cm, class_names, epoch):
     """
     Returns a matplotlib figure containing the plotted confusion matrix.
@@ -66,11 +67,11 @@ def train(args):
     # Set the device to GPU if available, otherwise use CPU
     devide = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     # Load the pre-trained ResNet-34 model
-    checkpoint = torch.load(os.path.join(args.checkpoints_path,'last.pt'))
-    model = resnet34()
+    # checkpoint = torch.load(os.path.join(args.checkpoints_path,'last.pt'))
+    model = resnet34(weights= ResNet34_Weights)
     # Replace the final fully connected layer to match our number of classes
     model.fc = nn.Linear(in_features=512, out_features=args.num_classes)
-    model.load_state_dict(checkpoint["model_state_dict"])
+    # model.load_state_dict(checkpoint["model_state_dict"])
     model.to(devide)
 
     # Define data transformations for training and testing
@@ -114,10 +115,12 @@ def train(args):
     # Define the loss function and optimizer
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
-    optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
-    current_epoch = checkpoint['epoch']
+    # optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+    # current_epoch = checkpoint['epoch']
+    current_epoch=0
     # Set up TensorBoard writer
-
+    if not os.path.isdir("train"):
+        os.makedirs("train")
     if not os.path.isdir(args.checkpoints_path):
         os.makedirs(args.checkpoints_path)
     if os.path.isdir(args.log_path):
