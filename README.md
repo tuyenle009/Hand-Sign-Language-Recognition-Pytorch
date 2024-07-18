@@ -26,7 +26,7 @@ Press "w" on the keyboard to write result
 2. Press "s" on the keyboard to take screenshots.
 ( Images will be saved in a folder of the same hand sign name )
 <p align="center">
-<img src="https://github.com/user-attachments/assets/e6c702f7-2f50-466e-9620-fd3019ac3ed4"   height= "380"  alt="handSign">
+<img src="https://github.com/user-attachments/assets/e6c702f7-2f50-466e-9620-fd3019ac3ed4"   height= "370"  alt="handSign">
 </p>
 
 ## Requirements
