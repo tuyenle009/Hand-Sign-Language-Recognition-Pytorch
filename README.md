@@ -31,6 +31,7 @@ Press "w" on the keyboard to write result
 
 ## Requirements
 **Run with IDE**
+
 cuda 12.2 is used in this project
 ```
 * opencv-python==4.5.5.62
