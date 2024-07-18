@@ -18,7 +18,7 @@ This project presents an innovative hand sign recognition system using deep lear
 **Working**
 Press "w" on the keyboard to write result
 <p align="center">
-<img src="https://github.com/user-attachments/assets/6eb1b2ef-d8e7-45c4-be79-25a701b35a4e" height= "500" alt="handSign">
+<img src="https://github.com/user-attachments/assets/6eb1b2ef-d8e7-45c4-be79-25a701b35a4e" height= "440" alt="handSign">
 </p>
 
 **Collect data**
@@ -26,7 +26,7 @@ Press "w" on the keyboard to write result
 2. Press "s" on the keyboard to take screenshots.
 ( Images will be saved in a folder of the same hand sign name )
 <p align="center">
-<img src="https://github.com/user-attachments/assets/e6c702f7-2f50-466e-9620-fd3019ac3ed4"   height= "500"  alt="handSign">
+<img src="https://github.com/user-attachments/assets/e6c702f7-2f50-466e-9620-fd3019ac3ed4"   height= "440"  alt="handSign">
 </p>
 
 ## Requirements
