@@ -1,4 +1,9 @@
-# Sign Language Recognition with Pytorch and MediaPipe
+
+<h1 align="center">
+<img src="https://github.com/user-attachments/assets/ceffbe1c-a0b2-4426-a145-ca3b00256676" alt="handSign">
+</h1>
+
+# Hand Sign Language Recognition with Pytorch and MediaPipe
 
 ## Introduction 
 
