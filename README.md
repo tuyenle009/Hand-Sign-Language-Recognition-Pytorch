@@ -5,4 +5,46 @@
 This project presents an innovative hand sign recognition system using deep learning and computer vision. By leveraging a ResNet34 model - Pytorch combined with MediaPipe and OpenCV, the system accurately detects and interprets hand signs for the alphabet and numbers in real-time. This cutting-edge technology promises to enhance accessibility and revolutionize human-computer interaction, offering new possibilities for communication and control.
 
 ## Demo
- <img src="https://github.com/user-attachments/assets/5ae4c991-08b1-40c1-8ae3-2f1bd7075008"  height="250" alt="handSign">
+**Hand gesture**
+<p align="center">
+<img src="https://github.com/user-attachments/assets/5ae4c991-08b1-40c1-8ae3-2f1bd7075008"  height="350" alt="handSign">
+</p>
+
+**Working**
+Press "w" on the keyboard to write result
+<p align="center">
+<img src="https://github.com/user-attachments/assets/5ae4c991-08b1-40c1-8ae3-2f1bd7075008"  height="350" alt="handSign">
+</p>
+
+**Collect data**
+1. Select a hand sign to collect.
+2. Press "s" on the keyboard to take screenshots.
+( Images will be saved in a folder of the same hand sign name )
+<p align="center">
+<img src="https://github.com/user-attachments/assets/5ae4c991-08b1-40c1-8ae3-2f1bd7075008"  height="350" alt="handSign">
+</p>
+
+## Requirements
+**Run with IDE**
+cuda 12.2 is used in this project
+```
+* opencv-python==4.5.5.62
+* matplotlib==3.8.3
+* numpy==1.26.4
+* mediapipe==0.10.14
+* scikit-learn==1.4.1.post1
+* tensorboard==2.16.2
+```
+```
+pip install -r requirements.txt
+```
+**Run with Docker**
+```
+docker build -t <imageName> .
+docker run -it --gpus all <imageName>
+```
+## Issues 
+This is a problem you may encounter when running the program.
+-   Before running `handSignDetection.py`, you must run `train.py` to train the model and save the `best.pt` checkpoints.
+-   `train.py` should be run for about 15 epochs to improve the model.
+-   You can collect more data to continue training the model.
