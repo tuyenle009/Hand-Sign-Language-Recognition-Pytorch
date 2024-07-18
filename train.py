@@ -114,10 +114,10 @@ def train(args):
 
     # Define the loss function and optimizer
     criterion = nn.CrossEntropyLoss()
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.03)
     # optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
-    # current_epoch = checkpoint['epoch']
     current_epoch=0
+    # current_epoch = checkpoint['epoch']
     # Set up TensorBoard writer
     if not os.path.isdir("train"):
         os.makedirs("train")
